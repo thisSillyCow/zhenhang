@@ -1,39 +1,30 @@
 <template>
-    <div class="page-index">
-        <h2>LAVAS</h2>
-        <h4>1111111111</h4>
-        <el-row>
-            <el-button>默认按钮</el-button>
-            <el-button type="primary">主要按钮</el-button>
-            <el-button type="success">成功按钮</el-button>
-            <el-button type="info">信息按钮</el-button>
-            <el-button type="warning">警告按钮</el-button>
-            <el-button type="danger">危险按钮</el-button>
-        </el-row>
+    <div class="pageHome">
+        <theme class="theme"></theme>
     </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-Vue.use( ElementUI);
+import theme from "../components/theme.vue";
 export default {
-    name: 'index',
+  name: "index",
+  components: {
+    theme
+  }
 };
 </script>
 
 <style lang="stylus" scoped>
+.pageHome {
+    display: flex;
+    flex-direction: column;
+}
 
-.page-index
-    display flex
-    justify-content center
-    align-items center
-    flex-direction column
-
-    h2
-        font-size 46px
-        font-weight 500
-        margin-bottom 0
-
+.theme {
+    position: fixed;
+    flex: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 </style>
